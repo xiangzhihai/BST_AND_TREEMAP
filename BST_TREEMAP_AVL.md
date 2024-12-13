@@ -126,6 +126,12 @@ def insert(node, key):
   - Guarantees O(log n) complexity even in the worst case.
   - Slightly more complex insertions/deletions due to rotations.
 
+- **Red-Black Tree**:
+  - Self-balancing binary search tree.
+  - Guarantees O(log n) complexity for insert, delete, and search operations.
+  - Less strictly balanced than AVL trees but requires fewer rotations, making it faster for insert-heavy workloads.
+  - Commonly used in scenarios like TreeMap, TreeSet, and other ordered collections in programming languages like Java.
+
 ---
 
 ## Summary
@@ -133,5 +139,6 @@ def insert(node, key):
 - **BST**: A fundamental data structure for maintaining keys in a tree with efficient average operations.
 - **TreeMap**: A sorted map typically backed by a self-balancing BST for consistent O(log n) access and ordered key retrieval.
 - **AVL**: A type of self-balancing BST that ensures strict height balance for guaranteed performance.
+- **Red-Black Tree**: A self-balancing BST that ensures a balance factor by maintaining color properties (red or black nodes). This results in efficient logarithmic time complexity for operations and is widely used in practical applications where moderate balancing suffices. It trades stricter balancing (like AVL trees) for better performance in insertions and deletions.
 
 All these structures rely on tree-based logic and ordering invariants to provide efficient data operations. The key difference lies in how well the tree remains balanced, which affects worst-case performance. AVL trees and Red-Black Trees power the efficiency behind TreeMap implementations.
